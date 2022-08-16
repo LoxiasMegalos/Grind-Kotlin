@@ -1,4 +1,7 @@
+import java.lang.Math.*
 import java.text.DecimalFormat
+import java.text.Format
+import kotlin.math.pow
 
 fun main(){
     //Faça um programa em que o usuário digite o diâmetro de um círculo e calcule a área e o perímetro dele
@@ -8,9 +11,16 @@ fun main(){
 
     val pi = 3.14
 
-    val dec = DecimalFormat("#,###.0000")
+    val piM = PI
 
+    val dec = DecimalFormat("#,###.00")
 
-    println("A area do circulo eh de: ${dec.format(pi*((diametro/2)*(diametro/2)))}cm")
+    println("A area do circulo eh de: ${"%.2f".format(pi*((diametro/2)*(diametro/2)))}cm")
     println("O perimetro do circulo eh de: ${dec.format(2*pi*(diametro/2))}cm")
+
+    println(piM)
+
+    var valor = 2.0
+    val n = 23
+    println("Valor $valor elevado a $n = ${valor.pow(n)}")
 }

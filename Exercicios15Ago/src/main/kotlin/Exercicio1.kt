@@ -1,3 +1,7 @@
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.Year
+import java.time.format.DateTimeFormatter
 import java.util.Date
 
 fun main(){
@@ -10,15 +14,22 @@ fun main(){
     val aniversario = readln()
     val nascimento:Int
 
-    val padrao = Regex("[0-9]{4}")
-    val resultado = padrao.findAll(Date().toString())
-    val verificacao = resultado.map{it.groupValues[0]}.joinToString().toInt()
+    //val padrao = Regex("[0-9]{4}")
+    //val resultado = padrao.findAll(Date().toString())
+    //val verificacao = resultado.map{it.groupValues[0]}.joinToString().toInt()
+
+    //var formataData = SimpleDateFormat("yyyy")
+    //var anoAtual = formataData.format(SimpleDateFormat("yyyy")).toInt()
+
+    var anoAtual = LocalDate.now().year
 
     if(aniversario == "sim"){
-        nascimento = verificacao - idade
+        nascimento = anoAtual - idade
     } else{
-        nascimento = verificacao - (idade+1)
+        nascimento = anoAtual - (idade+1)
     }
 
-    println("Ano: $verificacao : Idade: $idade : Nasceu em: $nascimento")
+    println("Ano - $anoAtual : Idade - $idade : Nasceu em - $nascimento")
+
+    //var ano = LocalDate.now().year
 }
