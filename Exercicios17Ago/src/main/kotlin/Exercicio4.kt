@@ -11,17 +11,29 @@ fun main(){
 
     //val rnds = (1..3).random()
 
-    while(numero <= 150){
+    while(numero <= 5){
 
-        //print("Idade entrevistado numero $numero: ")
-        //val idade = readln().toInt()
-        val idade = (1..100).random()
-        //print("Sexo entrevistado numero $numero: ")
-        //val sexo = readln().toInt()
-        val sexo = (1..3).random()
-        //print("Psicológico entrevistado numero $numero: ")
-        //val psico = readln().toInt()
-        val psico = (1..3).random()
+
+        var idade = 0
+        do{
+            print("Idade entrevistado numero $numero: ")
+            idade = readln().toInt()
+        } while(idade !in 1..100)
+        //val idade = (1..100).random()
+
+        var sexo = 0
+        do{
+            print("Sexo entrevistado numero $numero: ")
+            sexo = readln().toInt()
+        } while(sexo !in 1..3)
+        //val sexo = (1..3).random()
+
+        var psico = 0
+        do{
+            print("Psicológico entrevistado numero $numero: ")
+            psico = readln().toInt()
+        } while(psico !in 1..3)
+        //val psico = (1..3).random()
 
 
         if(psico == 1){
