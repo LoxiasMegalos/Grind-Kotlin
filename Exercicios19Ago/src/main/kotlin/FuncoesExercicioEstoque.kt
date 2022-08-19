@@ -42,7 +42,7 @@ fun atualizaProdutoLista(produto: String) {
         print("Modificar quantidade, (sim) (nao) :")
         resp = readln()
         if(resp == "sim"){
-            print("Infome o novo nome: ")
+            print("Infome a nova quantidade: ")
             val novoQuant = readln().toInt()
             quantidadesProdutos[posicao] = novoQuant
         }
@@ -53,8 +53,8 @@ fun atualizaProdutoLista(produto: String) {
             print("Infome o novo preço: ")
             val novoPreco = readln().toDouble()
             valoresUnitarios[posicao] = novoPreco
-            valoresTotais[posicao] = novoPreco * quantidadesProdutos[posicao]
         }
+        valoresTotais[posicao] =  valoresUnitarios[posicao] * quantidadesProdutos[posicao]
 
         println("$produto atualizado com sucesso!")
     } else{
