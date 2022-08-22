@@ -21,8 +21,8 @@ class Aviao (
     }
 
 
-    fun getDataDeRevisao(){
-        var formatador = SimpleDateFormat("dd/mm/yyyy")
+    fun getDataDeRevisao() {
+        var formatador = SimpleDateFormat("dd/MM/yyyy")
         println(formatador.format(dataDeRevisao))
     }
 
