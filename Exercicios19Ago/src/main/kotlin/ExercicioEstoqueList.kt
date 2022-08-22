@@ -22,14 +22,14 @@ fun main(){
 
         when(readln().toInt()){
             1 -> {
-                println("Cadastrando produtos!")
-                print("Informe o nome do produto: ")
-                val produto = readln()
-                print("Informe a quantidade do produto: ")
-                val quantidade = readln().toInt()
-                print("Informe o valor unitário do produto: ")
-                val valor = readln().toDouble()
-                cadastraProdutoLista(produto, quantidade, valor)
+                println("Cadastrando produtos!");
+                print("Informe o nome do produto: ");
+                val produto = readln();
+                print("Informe a quantidade do produto: ");
+                val quantidade = readln().toInt();
+                print("Informe o valor unitário do produto: ");
+                val valor = readln().toDouble();
+                cadastraProdutoLista(produto, quantidade, valor);
             }
             2 -> {
                 println("Removendo produtos!")

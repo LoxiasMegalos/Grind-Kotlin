@@ -4,12 +4,18 @@ val valoresUnitarios = mutableListOf<Double>()
 val valoresTotais = mutableListOf<Double>()
 
 fun cadastraProdutoLista(produto: String, quantidade: Int, valor: Double) {
-    nomesProdutos.add(produto)
-    quantidadesProdutos.add(quantidade)
-    valoresUnitarios.add(valor)
-    valoresTotais.add(valor*quantidade)
 
-    println("$produto cadastrado com sucesso!")
+    if(produto.isNotBlank()){
+        nomesProdutos.add(produto)
+        quantidadesProdutos.add(quantidade)
+        valoresUnitarios.add(valor)
+        valoresTotais.add(valor*quantidade)
+
+        println("$produto cadastrado com sucesso!")
+    } else{
+        println("Nome do produto inválido, não cadastrado!")
+    }
+
 }
 
 fun removeProdutoLista(produto: String) {
@@ -65,6 +71,6 @@ fun atualizaProdutoLista(produto: String) {
 fun listaProdutosLista() {
     for(i in 0 until nomesProdutos.size){
         println("Produto: ${nomesProdutos[i]} Quantidade: ${quantidadesProdutos[i]} " +
-                "Valor unitário: ${valoresUnitarios[i]}R$ Total em estoque: ${valoresTotais[i]}R$")
+                "Valor unitário: ${"%.2f".format(valoresUnitarios[i])}R$ Total em estoque: ${"%.2f".format(valoresTotais[i])}R$")
     }
 }
