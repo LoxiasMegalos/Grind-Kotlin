@@ -32,6 +32,7 @@ class Cliente (
 
     init{
         validaInicio()
+        clientesTotais += 1
     }
 
     private fun validaInicio(){
@@ -96,5 +97,14 @@ class Cliente (
     }
     fun setTelefone(novoTel:String){
         telefone = novoTel
+    }
+
+    companion object{
+
+        var clientesTotais = 0
+
+        fun getClientesCadastrados():String{
+            return "A quantidade de clientes cadastrados eh: $clientesTotais"
+        }
     }
 }

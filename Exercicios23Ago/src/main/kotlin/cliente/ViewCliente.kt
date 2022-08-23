@@ -13,6 +13,7 @@ fun main(){
             println("(4) - Listar Clientes e compras")
             println("(5) - Adicionar itens a listas de compras")
             println("(6) - Remover itens da lista de compras")
+            println("(7) - Mostra o total de clientes")
             println("(0) - Sair")
             print("Selecione: ")
             val opcao = readln().toInt()
@@ -145,6 +146,10 @@ fun main(){
                             break
                         }
                     }
+                }
+                7 ->{
+                    println("Verificando a quantidade de clientes criados!")
+                    println(Cliente.getClientesCadastrados())
                 }
                 0 ->{
                     println("Obrigado por utilizar! ")
