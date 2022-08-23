@@ -16,8 +16,6 @@ fun main(){
     cliente2.exibeInformacoes()
 
 
-
-
     var boieng = Aviao(123, Date(), "azul")
 
     boieng.getDataDeRevisao()
@@ -36,7 +34,7 @@ fun main(){
 
     println(patineteEnzo.pintarPatinete("Vermelho"))
     println(patineteMurillo.pintarPatinete("Preto"))
-    
+
     println(patineteEnzo.mudarPreco(500.0))
     println(patineteMurillo.mudarPreco(90.0))
 
