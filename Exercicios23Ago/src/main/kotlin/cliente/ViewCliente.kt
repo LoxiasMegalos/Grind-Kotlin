@@ -1,5 +1,6 @@
 package cliente
 
+
 val listaClientes = mutableListOf<Cliente>()
 fun main(){
 
@@ -124,15 +125,29 @@ fun main(){
                     println("Adicionando item a lista de um cliente")
                     print("Informe o nome do cliente que quer adicionar itens a lista: ")
                     val buscaNome = readln()
+
+                    var clienteAdd = Cliente(".","","")
+
+
                     for(cliente in listaClientes){
                         if(cliente.getNome() == buscaNome){
-                            print("Informe o item que deseja adicionar: ")
-                            val itemAdicionar = readln()
-                            cliente.adicionaCompras(itemAdicionar)
+                            //print("Informe o item que deseja adicionar: ")
+                            //val itemAdicionar = readln()
+                            //cliente.adicionaCompras(itemAdicionar)
+                            clienteAdd = cliente
+
                             break
                         }
                     }
 
+                    while(true){
+                        print("Informe o item que deseja adicionar: ")
+                        val itemAdicionar = readln()
+                        if(itemAdicionar.isBlank()){
+                            break
+                        }
+                        clienteAdd.adicionaCompras(itemAdicionar)
+                    }
                 }
                 6 ->{
                     println("Removendo item a lista de um cliente")

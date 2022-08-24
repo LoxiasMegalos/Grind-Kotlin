@@ -32,7 +32,10 @@ class Cliente (
 
     init{
         validaInicio()
-        clientesTotais += 1
+        if(nome != "."){
+            clientesTotais += 1
+        }
+
     }
 
     private fun validaInicio(){
@@ -49,13 +52,13 @@ class Cliente (
     }
 
     fun removeItemComprado(item:String){
-        for(compra in itensComprados){
-            if(compra == item){
-                itensComprados.remove(item)
-                println("$item removido com sucesso da sua lista")
-                break
-            }
+        if(itensComprados.contains(item)){
+            itensComprados.remove(item)
+            println("$item removido com sucesso da sua lista")
+            return
         }
+        println("$item nao encontrado na lista:")
+        return
     }
 
     fun listarCompras(): String {
