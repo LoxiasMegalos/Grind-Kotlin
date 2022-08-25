@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="animais.PreguicaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-08-25T16:49:41" hostname="DESKTOP-VA1CB2I" time="0.015">
+  <properties/>
+  <testcase name="correr()" classname="animais.PreguicaTest" time="0.011"/>
+  <testcase name="toStringTest()" classname="animais.PreguicaTest" time="0.0"/>
+  <testcase name="emitirSom()" classname="animais.PreguicaTest" time="0.0"/>
+  <testcase name="iniciaComNomeVazioTest()" classname="animais.PreguicaTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
